@@ -30,7 +30,7 @@ body {
     margin: 0 auto;
 }
 
-ol li{
+ul li{
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
@@ -45,21 +45,21 @@ ol li{
     user-select: none;
 }
 
-ol li:nth-child(odd){
+ul li:nth-child(odd){
     background: #f9f9f9;
 }
 
-ol li:hover{
+ul li:hover{
     background: #ddd;
 }
 
-ol li.checked{
+ul li.checked{
     background: #888;
     color: #fff;
     text-decoration: line-through;
 }
 
-ol li.checked::before{
+ul li.checked::before{
     content: '';
     position: absolute;
     border-color: #fff;
