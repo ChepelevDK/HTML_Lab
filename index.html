@@ -6,24 +6,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<script src="script.js"></script>
 <div class="header">
     <h2 style="margin: 5px">Список дел</h2>
     <div class="addObj">
-        <input type="text" placeholder="Введите новое дело...">
-        <span class="addButton">Добавить</span>
+        <input id="input" type="text" placeholder="Введите новое дело...">
+        <span class="addButton" onclick="addToList()">Добавить</span>
     </div>
 </div>
 <div class="content">
-    <ul>
-        <li>Приготовить завтрак
-            <button>&#10060</button>
-        </li>
-        <li>Погладить одежду
-            <button>&#10060</button>
-        </li>
-        <li>Сделать уборку
-            <button>&#10060</button>
-        </li>
+    <ul id="list">
+        <li>Приготовить завтрак</li>
+        <li>Погладить одежду</li>
+        <li>Сделать уборку</li>
     </ul>
 </div>
 </body>
