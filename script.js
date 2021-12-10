@@ -53,3 +53,33 @@ function addToList() {
         }
     }
 }
+
+function showAll(){
+    const myList = document.getElementsByTagName("li");
+
+    for (let i = 0; i < myList.length; i++){
+        if (myList.item(i).className === 'hide'){
+            myList.item(i).className = '';
+        }
+    }
+}
+
+function showChecked(){
+    const myList = document.getElementsByTagName("li");
+
+    for (let i = 0; i < myList.length; i++){
+        if (myList.item(i).classList.value !== 'checked'){
+            myList.item(i).className = 'hide';
+        }
+    }
+}
+
+function showUnfinished(){
+    const myList = document.getElementsByTagName("li");
+
+    for (let i = 0; i < myList.length; i++){
+        if (myList.item(i).classList.value === 'checked'){
+            myList.item(i).className = 'hide';
+        }
+    }
+}

@@ -108,3 +108,24 @@ input{
 .addButton:hover{
     background-color: #bbb;
 }
+
+.filter{
+    text-align: center;
+    margin: 50px 0 0 0;
+    font-size: 25px;
+    font-family: "Constantia";
+    font-weight: bold;
+}
+
+.filterBtn{
+    margin: 0 0 0 50px;
+}
+
+.filterBtn:hover{
+    color: #668a91;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
