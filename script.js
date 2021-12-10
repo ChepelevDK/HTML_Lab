@@ -1,28 +1,35 @@
 window.onload = function initRemoveButtons() {
-    var myList = document.getElementsByTagName("li");
+    const myList = document.getElementsByTagName("li");
 
-    for (var i = 0; i < myList.length; i++) {
-        var span = document.createElement("span");
-        var btn = document.createTextNode("\u00D7");
+    for (let i = 0; i < myList.length; i++) {
+        const span = document.createElement("span");
+        const btn = document.createTextNode("\u00D7");
         span.className = "close";
         span.appendChild(btn);
         myList[i].appendChild(span);
     }
 
-    var close = document.getElementsByClassName("close");
+    const close = document.getElementsByClassName("close");
 
-    for (var i = 0; i < close.length; i++){
+    for (let i = 0; i < close.length; i++){
         close[i].onclick = function () {
-            var div = this.parentElement;
+            const div = this.parentElement;
             div.style.display = "none";
         }
     }
+
+    const list = document.querySelector('ul');
+    list.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+        }
+    }, false);
 }
 
 function addToList() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("input").value;
-    var t = document.createTextNode(inputValue);
+    const li = document.createElement("li");
+    const inputValue = document.getElementById("input").value;
+    const t = document.createTextNode(inputValue);
     li.appendChild(t);
     if (inputValue === '') {
         alert("Надо что-то написать!");
@@ -31,17 +38,17 @@ function addToList() {
     }
     document.getElementById("input").value = "";
 
-    var span = document.createElement("span");
-    var txt = document.createTextNode("\u00D7");
+    const span = document.createElement("span");
+    const txt = document.createTextNode("\u00D7");
     span.className = "close";
     span.appendChild(txt);
     li.appendChild(span);
 
-    var close = document.getElementsByClassName("close");
+    const close = document.getElementsByClassName("close");
 
-    for (var i = 0; i < close.length; i++) {
+    for (let i = 0; i < close.length; i++) {
         close[i].onclick = function () {
-            var div = this.parentElement;
+            const div = this.parentElement;
             div.style.display = "none";
         }
     }
